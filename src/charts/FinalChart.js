@@ -1,14 +1,13 @@
 import Chart from "./Chart";
 import Chart2 from "./Chart2";
 import {
-  Container,
   Grid,
   GridItem,
   Heading,
-  HStack,
   Text,
-  VStack,
 } from "@chakra-ui/react";
+import Chart3 from "./Chart3";
+import Chart4 from "./Chart4";
 
 function FinalChart() {
   return (
@@ -48,8 +47,9 @@ function FinalChart() {
             </Heading>
             <Chart2 />
           </GridItem>
+          <Chart3 />
+          <Chart4 />
       </Grid>
-      {console.log("hahaha")}
     </>
   );
 }
