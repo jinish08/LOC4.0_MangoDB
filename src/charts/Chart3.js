@@ -13,15 +13,15 @@ let renderLabel = function (entry) {
 
 const Chart3 = () => {
   return (
-    <PieChart width={800} height={400}>
+    <PieChart width={600} height={400}>
       <Pie
         data={data}
-        cx={420}
+        cx={360}
         cy={200}
         startAngle={180}
         endAngle={0}
-        innerRadius={60}
-        outerRadius={80}
+        innerRadius={100}
+        outerRadius={140}
         fill="#8884d8"
         paddingAngle={0}
         dataKey="value"

@@ -5,7 +5,7 @@ const Dash = () => {
   return (
     <>
       <section id="header">
-        <nav class="navbar bg-info navbar-info">
+        <nav class="navbar bg-info navbar-info  fixed-top">
           <div class="container-fluid">
             <a href="" class="navbar-brand brand">
               Dashboard
@@ -42,8 +42,6 @@ const Dash = () => {
             </li>
           </ul>
         </div>
-      </div>
-      <div className="chart">
       </div>
     </>
   );
