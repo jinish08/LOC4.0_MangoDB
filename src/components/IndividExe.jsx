@@ -16,12 +16,12 @@ const IndividExe = (props) => {
         <Image
           src={props.imgURL}
           alt="jdfln"
-          width="100px"
-          height="100px"
+          width="150px"
+          height="150px"
           px="15px"
         />
         <VStack alignItems="left">
-          <Heading>{props.exername}</Heading>
+          <Heading style={{color: "#21325E" }} >{props.exername}</Heading>
           <Text>{props.desc}</Text>
         </VStack>
       </HStack>

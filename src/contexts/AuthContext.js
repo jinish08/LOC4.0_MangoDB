@@ -19,12 +19,14 @@ const AuthContext = createContext({
   signInWithGoogle: () => Promise,
   forgotPassword: () => Promise,
   resetPassword: () => Promise,
+  level: 1,
 });
 
 export const useAuth = () => useContext(AuthContext);
 
 export default function AuthContextProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
+  const [level, setLevel] = useState(1);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -37,6 +39,9 @@ export default function AuthContextProvider({ children }) {
 
   function register(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
+  }
+  function levelUp() {
+    return setLevel(level+1)
   }
 
   function login(email, password) {
@@ -70,6 +75,8 @@ export default function AuthContextProvider({ children }) {
     signInWithGoogle,
     forgotPassword,
     resetPassword,
+    level,
+    levelUp,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
