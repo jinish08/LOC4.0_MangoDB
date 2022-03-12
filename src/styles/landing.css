@@ -4,10 +4,43 @@
 }
 
 .bootstrap-card-two{
-    width: 720px;
+    width: 1000px;
     margin-left: 100px;
+    height: 257.49px;
 }
 
 .contain-cards-end{
     margin-right : 100px;
+}
+
+.bootstrap-card{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 50px 50px 50px 100px;
+    padding: 20px;
+}
+
+.edit-img{
+    height: 230px;
+}
+
+.contain-cards{
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.edit-img-two{
+    margin-left: 50px;
+}
+
+.information{
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
 }
