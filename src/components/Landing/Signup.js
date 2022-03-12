@@ -48,13 +48,12 @@ const Signup = ({ handleSign, sign }) => {
       });
 
       await addDoc(userCollectionRef, {
-        uid: authUser.user.uid,
+        user_id: authUser.user.uid,
         name: username,
         email: authUser.user.email,
         points: 0,
         cricket: {
           E1: [0, 0, 0, 0, 0, 0, 0],
-          E2: [0, 0, 0, 0, 0, 0, 0],
         },
       });
       navigate("/");
