@@ -1,6 +1,7 @@
 import {
   Button,
   Container,
+  Heading,
   HStack,
   Image,
   Img,
@@ -28,31 +29,35 @@ const Landing = () => {
     <>
       <img src="assets/landing-bg.png" alt="topimg" width="100%" />
       <HStack justifyContent="space-evenly" mt="-32">
-        <VStack >
-            <Text>Already have an account?</Text>
-          <Button
-            style={{ background: "linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)"}}
-            colorScheme="blue"
-            onClick={handleLogin}
-            w="80"
-            rounded="full"
-          >
-            <HStack>
+        <VStack spacing={"60px"}>
+          <VStack mt="-20" spacing={"20px"}>
+            <Heading size={"4xl"}>Already have</Heading>
+            <Text fontSize={"xl"}>This is a temporary statement</Text>
+          </VStack>
+            <HStack spacing={"24px"}>
+              <Button
+              style={{ background: "linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)"}}
+              colorScheme="blue"
+              onClick={handleLogin}
+              w="56"
+              rounded="full">
+              <HStack>
+                <FiLogIn />
+                <Text>&nbsp;&nbsp;Login</Text>
+              </HStack>
+            </Button>
+            <Button
+              style={{ background: "linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)"}}
+              onClick={handleSign}
+              w="56"
+              rounded="full"
+              color="white">
               <FiLogIn />
-              <Text>Login</Text>
+              &nbsp;&nbsp;&nbsp;
+              Signup
+          </Button>
             </HStack>
-          </Button>
-          <Text>New Here?</Text>
-          <Button
-            style={{ background: "linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)"}}
-            onClick={handleSign}
-            w="80"
-            rounded="full"
-            color="white"
-          >
-            <FiLogIn />
-            Signup
-          </Button>
+          
         </VStack>
         <Image boxSize="470px" src="assets/hero.svg" alt="Hero" />
       </HStack>
