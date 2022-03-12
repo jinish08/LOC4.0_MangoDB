@@ -28,7 +28,7 @@ const Landing = () => {
   return (
     <>
       <img src="assets/landing-bg.png" alt="topimg" width="100%" />
-      <HStack justifyContent="space-evenly" mt="-32">
+      <HStack justifyContent="space-evenly" mt="-36">
         <VStack spacing={"60px"}>
           <VStack mt="-20" spacing={"20px"}>
             <Heading size={"4xl"}>Already have</Heading>
@@ -61,6 +61,7 @@ const Landing = () => {
         </VStack>
         <Image boxSize="470px" src="assets/hero.svg" alt="Hero" />
       </HStack>
+      
       <Login loginin={loginin} handleLogin={handleLogin} />
       <Signup sign={sign} handleSign={handleSign} />
     </>
