@@ -1,17 +1,4 @@
-import {
-  VStack,
-  HStack,
-  Text,
-  Button,
-  Image,
-  Heading,
-  Container,
-  UnorderedList,
-  ListItem,
-} from "@chakra-ui/react";
-import { ArrowRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 
-import React, { useEffect, useRef, useState, useCallback } from "react";
 import { db } from "../../utils/init-firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import {
@@ -25,57 +12,12 @@ import {
   increment,
 } from "firebase/firestore";
 
-const Exercise1 = () => {
+import React, { useEffect, useRef, useState, useCallback } from "react";
+
+const TimerController = () => {
   const [renderedStreamDuration, setRenderedStreamDuration] =
     useState("00:00:00");
-  return (
-    <>
-      <Container maxW="container.xl" p="10">
-        <Button m="20px" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }}>
-          <ChevronLeftIcon />
-          Back
-        </Button>
-        <HStack w="full" h="full" p={10} spacing={10} align="flex-start">
-          <VStack px="40px">
-            <Image w="lg" src="http://localhost:3000/assets/exe1.gif" />
-            <Container className="timer-display" textAlign="center">
-              {renderedStreamDuration}
-            </Container>
-          </VStack>
-          <VStack justifyContent="center" w="md">
-            <Heading p="10px" m="10px">
-              Instructions:{" "}
-            </Heading>
-            <UnorderedList p="10px" m="10px" color="">
-              <ListItem>Lorem ipsum dolor sit amet</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-            </UnorderedList>
-            <TimerController
-              renderedStreamDuration={renderedStreamDuration}
-              setRenderedStreamDuration={setRenderedStreamDuration}
-            />
-        <Button
-          size="md"
-          p="25px"
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-        >
-          Go to next excerise
-          <ArrowRightIcon />
-        </Button>
-          </VStack>
-        </HStack>
-      </Container>
-    </>
-  );
-};
 
-const TimerController = ({
-  renderedStreamDuration,
-  setRenderedStreamDuration,
-}) => {
   const { currentUser } = useAuth();
 
   const uid = currentUser?.uid;
@@ -183,13 +125,10 @@ const TimerController = ({
   };
 
   return (
-    <Container className="timer-controller-wrapper">
-      <Container className="buttons-wrapper">
-        <Button
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-          p="10px"
-          m="10px"
+    <div className="timer-controller-wrapper">
+      <div className="timer-display">{renderedStreamDuration}</div>
+      <div className="buttons-wrapper">
+        <button
           onClick={startHandler}
           disabled={isStartBtnDisabled}
           className={`timer-controller-btn ${
@@ -197,13 +136,8 @@ const TimerController = ({
           }`}
         >
           start
-        </Button>
-        <Button
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-          p="10px"
-          m="10px"
-          my="100px"
+        </button>
+        <button
           className={`timer-controller-btn danger ${
             isStopBtnDisabled ? "disabled" : ""
           }`}
@@ -211,12 +145,8 @@ const TimerController = ({
           onClick={stopHandler}
         >
           stop
-        </Button>
-        <Button
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-          p="10px"
-          m="10px"
+        </button>
+        <button
           className={`timer-controller-btn ${
             isPauseBtnDisabled ? "disabled" : ""
           }`}
@@ -224,12 +154,8 @@ const TimerController = ({
           onClick={pauseHandler}
         >
           pause
-        </Button>
-        <Button
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-          p="10px"
-          m="10px"
+        </button>
+        <button
           className={`timer-controller-btn ${
             isResumeBtnDisabled ? "disabled" : ""
           }`}
@@ -237,10 +163,10 @@ const TimerController = ({
           onClick={resumeHandler}
         >
           resume
-        </Button>
-      </Container>
-    </Container>
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default Exercise1;
+export default TimerController;
