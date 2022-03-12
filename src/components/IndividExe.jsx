@@ -9,19 +9,19 @@ import {
 } from "@chakra-ui/react";
 import "../styles/IndividExe.css";
 
-const IndividExe = () => {
+const IndividExe = (props) => {
   return (
     <Container w="400px" className="cardProperty" bgColor="#f5f5f5">
       <HStack justifyContent="flex-start">
         <Image
-          src="http://localhost:3000/assets/exe1.gif"
+          src={props.imgURL}
           alt="jdfln"
           width="100px"
           height="100px"
         />
         <VStack alignItems="left">
-          <Heading>Running</Heading>
-          <Text>Running is important for any athlete</Text>
+          <Heading>{props.exername}</Heading>
+          <Text>{props.desc}</Text>
         </VStack>
       </HStack>
     </Container>
