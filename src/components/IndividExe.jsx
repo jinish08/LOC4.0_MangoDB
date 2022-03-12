@@ -18,6 +18,7 @@ const IndividExe = (props) => {
           alt="jdfln"
           width="100px"
           height="100px"
+          px="15px"
         />
         <VStack alignItems="left">
           <Heading>{props.exername}</Heading>
