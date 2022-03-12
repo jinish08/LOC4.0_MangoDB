@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import {
   PieChart,
   Pie,
@@ -8,19 +8,23 @@ import {
   Cell,
 } from "recharts";
 
-const data = [
-  { name: "Exercise 1", value: 20 },
-  { name: "Exercise 2", value: 40 },
-  { name: "Exercise 3", value: 20 },
-  { name: "Exercise 4", value: 20 },
-];
 
 const barColors = ["#92A3FD", "#C58BF2"];
 let renderLabel = function (entry) {
   return entry.name;
 };
 
-const Chart2 = () => {
+const Chart2 = ({exe1}) => {
+
+  
+let data = [
+  { name: "Exercise 1", value: exe1 },
+  { name: "Exercise 2", value: 40 },
+  { name: "Exercise 3", value: 20 },
+  { name: "Exercise 4", value: 20 },
+];
+  console.log(exe1);
+
   return (
     <div>
       <PieChart width={400} height={400}>
