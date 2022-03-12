@@ -65,7 +65,7 @@ const Login = ({ handleLogin, loginin }) => {
                   duration: 5000,
                   isClosable: true,
                 });
-                navigate("/main");
+                navigate("/");
               })
               .catch((error) => {
                 console.log(error);
