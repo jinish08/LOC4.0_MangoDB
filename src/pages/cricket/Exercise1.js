@@ -10,6 +10,7 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { ArrowRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
+import Webcam from "react-webcam";
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { db } from "../../utils/init-firebase";
@@ -52,6 +53,7 @@ const Exercise1 = () => {
               <ListItem>Integer molestie lorem at massa</ListItem>
               <ListItem>Facilisis in pretium nisl aliquet</ListItem>
             </UnorderedList>
+            {/* <Webcam videoConstraints={{width: 1280,height: 720}}/> */}
             <TimerController
               renderedStreamDuration={renderedStreamDuration}
               setRenderedStreamDuration={setRenderedStreamDuration}
