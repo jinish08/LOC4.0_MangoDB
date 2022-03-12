@@ -4,6 +4,10 @@
 }
 
 .bootstrap-card-two{
-    width: 1080px;
+    width: 720px;
     margin-left: 100px;
+}
+
+.contain-cards-end{
+    margin-right : 100px;
 }

@@ -20,8 +20,8 @@ const Chart3 = () => {
         cy={200}
         startAngle={180}
         endAngle={0}
-        innerRadius={60}
-        outerRadius={80}
+        innerRadius={100}
+        outerRadius={140}
         fill="#8884d8"
         paddingAngle={0}
         dataKey="value"

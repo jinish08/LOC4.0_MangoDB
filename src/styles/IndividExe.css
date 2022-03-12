@@ -1,0 +1,11 @@
+.cardProperty{
+   /* box-shadow : 1px, 1px, rgba(0, 0, 0, 0.2); */
+    border-radius: 20px;
+    box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* padding-right: 300px; */
+    /* margin-bottom: 60px; */
+
+}
