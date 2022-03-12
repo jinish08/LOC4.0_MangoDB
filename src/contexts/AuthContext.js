@@ -10,6 +10,17 @@ import {
   sendPasswordResetEmail,
   confirmPasswordReset,
 } from "@firebase/auth";
+import {
+  collection,
+  doc,
+  updateDoc,
+  getDoc,
+  getDocs,
+  query,
+  where,
+  increment,
+} from "firebase/firestore";
+import { db } from "../utils/init-firebase";
 
 const AuthContext = createContext({
   currentUser: null,
@@ -40,7 +51,26 @@ export default function AuthContextProvider({ children }) {
   function register(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
   }
-  function levelUp() {
+
+  const levelUp = async (lvl) => {
+    const uid = currentUser?.uid;
+    try{
+      const userRef = collection(db, "users");
+      const q = query(userRef, where("user_id", "==", uid));
+      const querySnapshot = await getDocs(q);
+      const userID = querySnapshot.docs[0].id;
+      console.log(userID);
+      const userDoc = doc(db, "users", userID);
+      const docSnap = await getDoc(userDoc);
+      console.log(docSnap.data().level);
+      await updateDoc(userDoc, {
+        level: lvl,
+      });
+      console.log(docSnap.data().level);
+    } catch (err) {
+      console.log(err);
+    }
+
     return setLevel(level+1)
   }
 
