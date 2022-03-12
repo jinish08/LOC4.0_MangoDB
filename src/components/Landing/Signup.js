@@ -48,13 +48,16 @@ const Signup = ({ handleSign, sign }) => {
       });
 
       await addDoc(userCollectionRef, {
-        user_id: authUser.user.uid,
+        uid: authUser.user.uid,
         name: username,
         email: authUser.user.email,
         points: 0,
-        address: "",
+        cricket: {
+          E1: [0, 0, 0, 0, 0, 0, 0],
+          E2: [0, 0, 0, 0, 0, 0, 0],
+        },
       });
-      navigate("/main");
+      navigate("/");
     } catch (error) {
       toast({
         description: "Some error occured",
@@ -89,8 +92,7 @@ const Signup = ({ handleSign, sign }) => {
         <Text as="h5" fontWeight="semibold" my="3">
           Signup using
         </Text>
-        <Flex justifyContent="space-around" mx="10" my="8" mb="20">
-        </Flex>
+        <Flex justifyContent="space-around" mx="10" my="8" mb="20"></Flex>
         <form
           onSubmit={async (e) => {
             //     e.preventDefault();

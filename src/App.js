@@ -3,9 +3,11 @@ import Cricket from "./pages/cricket";
 import Exercise1 from "./pages/cricket/Exercise1";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
+import AuthContextProvider from "./contexts/AuthContext";
 
 function App() {
   return (
+    <AuthContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
@@ -14,6 +16,7 @@ function App() {
         <Route path="cricket/e1" element={<Exercise1 />} />
       </Routes>
     </BrowserRouter>
+    </AuthContextProvider>
   );
 }
 
