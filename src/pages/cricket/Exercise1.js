@@ -6,7 +6,6 @@ import {
   Image,
   Heading,
   Container,
-  Flex,
 } from "@chakra-ui/react";
 import { ArrowRightIcon } from "@chakra-ui/icons";
 import React, { useEffect, useRef, useState, useCallback } from "react";

@@ -4,6 +4,7 @@ import Exercise1 from "./pages/cricket/Exercise1";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import AuthContextProvider from "./contexts/AuthContext";
+import Exerciselist from "./pages/cricket/Exerciselist";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Dashboard />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/cricket" element={<Cricket />} />
+        <Route path="/cricket/exercise" element={<Exerciselist />} />
         <Route path="cricket/e1" element={<Exercise1 />} />
       </Routes>
     </BrowserRouter>
