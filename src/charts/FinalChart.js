@@ -69,13 +69,7 @@ function FinalChart() {
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
             <Text padding={"100px 40px"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              elementum lobortis sollicitudin. Phasellus faucibus nisl nec
-              dictum ultrices. Donec aliquam efficitur libero eu venenatis.
-              Vestibulum ultrices est in erat poas14314suere, id convallis orci
-              volutpat. Sed turpis mi, dictum eget tempor eget, sodales in urna.
-              Duis nec vestibulum elit, et convallis nisi. Fusce rutrum sit amet
-              mi sit amet vulputate. Donec.
+              Welcome back to the daily 
             </Text>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">

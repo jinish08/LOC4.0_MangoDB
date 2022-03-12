@@ -13,6 +13,7 @@ import Login from "../components/Landing/Login";
 import Signup from "../components/Landing/Signup";
 import { FiLogIn } from "react-icons/fi";
 import "../styles/landing.css"
+// import Footer from "../components/Footer";
 
 const Landing = () => {
   const [sign, setSign] = useState(false);
@@ -144,6 +145,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
+      {/* <Footer/> */}
 
       <Login loginin={loginin} handleLogin={handleLogin} />
       <Signup sign={sign} handleSign={handleSign} />

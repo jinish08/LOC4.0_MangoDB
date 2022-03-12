@@ -15,8 +15,9 @@ const Level = () => {
 
   return (
     <div>
-      <h1>{level}</h1>
-      <button onClick={incLevel}>Add Level</button>
+    {/* <Dash /> */}
+      {/* <h1>{level}</h1>
+      <button onClick={incLevel}>Add Level</button> */}
     </div>
   );
 };

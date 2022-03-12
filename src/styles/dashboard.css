@@ -78,3 +78,14 @@ body{
     position: absolute;
     top: 9.5vh;
 }
+
+.buttonClass{
+    /* background:"linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%)"; */
+       background-color : "red"!important;
+       color: "red"!important;
+       border-radius: 50%;
+}
+
+.nav-item{
+    font-weight: bolder;
+}

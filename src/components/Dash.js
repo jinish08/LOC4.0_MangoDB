@@ -1,5 +1,16 @@
 import React from "react";
+import {
+  VStack,
+  HStack,
+  Text,
+  Image,
+  Button,
+  Heading,
+  Container,
+} from "@chakra-ui/react";
 import "../styles/dashboard.css";
+import ProfileInfo from "./ProfileInfo";
+import { withTheme } from "@emotion/react";
 
 const Dash = () => {
   return (
@@ -10,6 +21,8 @@ const Dash = () => {
             <a href="" class="navbar-brand brand">
               Dashboard
             </a>
+       
+              <ProfileInfo/>
           </div>
         </nav>
       </section>
@@ -22,22 +35,22 @@ const Dash = () => {
                 aria-current="page"
                 href="#"
               >
-                <i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home
+                <i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link sidebar-link" href="#">
-                <i class="fa-solid fa-c"></i>&nbsp;&nbsp;Cricket
+                <i class="fa-solid fa-c"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cricket
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link sidebar-link" href="#">
-                <i class="fa-solid fa-y"></i>&nbsp;&nbsp;Yoga
+                <i class="fa-solid fa-y"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yoga
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link sidebar-link" href="#">
-                <i class="fa-solid fa-dumbbell"></i>&nbsp;&nbsp;Exercise
+                <i class="fa-solid fa-dumbbell"></i>&nbsp;&nbsp;&nbsp;Exercise
               </a>
             </li>
           </ul>
