@@ -3,21 +3,21 @@ import {
   VStack,
   HStack,
   Text,
-  Button,
   Image,
   Heading,
   Container,
-  Flex,
 } from "@chakra-ui/react";
-import "../styles/IndividExe.css"
-import { ArrowRightIcon } from "@chakra-ui/icons";
+import "../styles/IndividExe.css";
 
 const IndividExe = () => {
   return (
-    <Container className="cardProperty">
+    <Container w="400px" className="cardProperty" bgColor="#f5f5f5">
       <HStack justifyContent="flex-start">
-        <img src="http://localhost:3000/assets/running.png"
-          alt="jdfln" width="100px" height="100px"
+        <Image
+          src="http://localhost:3000/assets/exe1.gif"
+          alt="jdfln"
+          width="100px"
+          height="100px"
         />
         <VStack alignItems="left">
           <Heading>Running</Heading>
