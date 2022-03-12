@@ -12,7 +12,7 @@ import React, { useState } from "react";
 import Login from "../components/Landing/Login";
 import Signup from "../components/Landing/Signup";
 import { FiLogIn } from "react-icons/fi";
-import "../styles/landing.css"
+import "../styles/landing.css";
 
 const Landing = () => {
   const [sign, setSign] = useState(false);
@@ -68,78 +68,106 @@ const Landing = () => {
         </VStack>
         <Image boxSize="470px" src="assets/hero.svg" alt="Hero" />
       </HStack>
-      <div className="d-flex justify-content-start contain-cards contain-cards-start">
-        <div className="card mb-3 bootstrap-card">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
-            </div>
-            <div className="col-md-8">
-              <div className="card-body">
-                <h5 className="card-title">Track Your Goal</h5>
-                <p className="card-text">
-                Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals
-                </p>
+      <div className="information">
+        <div className="d-flex justify-content-start contain-cards contain-cards-start">
+          <div className="card mb-3 bootstrap-card bootstrap-card-one">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src="assets/hero.svg"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h1 className="card-title">Track Your Goal</h1>
+                  <p className="card-text">
+                    Don't worry if you have trouble determining your goals, We can
+                    help you determine your goals and track your goals
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="d-flex justify-content-end contain-cards contain-cards-end">
-        <div className="card mb-3 bootstrap-card">
+        <div className="d-flex justify-content-end contain-cards contain-cards-end">
+          <div className="card mb-3 bootstrap-card bootstrap-card-one">
+            <div className="row g-0">
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h1 className="card-title">Exercise and Burn Up</h1>
+                  <p className="card-text">
+                    Let’s keep burning, to achieve yours goals, it hurts only
+                    temporarily, if you give up now you will be in pain forever
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="assets/hero.svg"
+                  className="img-fluid rounded-start"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card mb-3 bootstrap-card bootstrap-card-two">
           <div className="row g-0">
-            <div className="col-md-8">
+            <div className="col-md-4">
+              <img
+                src="assets/hero.svg"
+                className="img-fluid rounded-start edit-img"
+                alt="..."
+              />
+            </div>
+            <div className="col-md-4">
               <div className="card-body">
-                <h5 className="card-title">Exercise and Burn Up</h5>
+                <h1 className="card-title">Get Video Assistance</h1>
                 <p className="card-text">
-                Let’s keep burning, to achieve yours goals, it hurts only temporarily, if you give up now you will be in pain forever
+                  Aren’t sure if you are doing the exercise properly? Worry not!
+                  We’ve got complete video assistance from where you can get help
+                  in following the routine
                 </p>
               </div>
             </div>
             <div className="col-md-4">
-              <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
+              <img
+                src="assets/hero.svg"
+                className="img-fluid rounded-start edit-img edit-img-two"
+                alt="..."
+              />
             </div>
           </div>
         </div>
-      </div>
-      <div className="card mb-3 bootstrap-card-two">
-        <div className="row g-0">
-          <div className="col-md-4">
-            <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
-          </div>
-          <div className="col-md-4">
-            <div className="card-body">
-              <h5 className="card-title">Get Video Assistance</h5>
-              <p className="card-text">
-              Aren’t sure if you are doing the exercise properly? 
-              Worry not!
-              We’ve got complete video assistance from where you can get help in following the routine
-              </p>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
-          </div>
-        </div>
-      </div>
-      <div className="d-flex justify-content-end contain-cards contain-cards-end">
-        <div className="card mb-3 bootstrap-card-two">
-          <div className="row g-0">
-            <div className="col-md-4">
-              <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
-            </div>
-            <div className="col-md-4">
-              <div className="card-body">
-                <h5 className="card-title">Get Video Assistance</h5>
-                <p className="card-text">
-                Aren’t sure if you are doing the exercise properly? 
-                Worry not!
-                We’ve got complete video assistance from where you can get help in following the routine
-                </p>
+        <div className="d-flex justify-content-end contain-cards contain-cards-end">
+          <div className="card mb-3 bootstrap-card bootstrap-card-two">
+            <div className="row g-0">
+              <div className="col-md-4">
+                <img
+                  src="assets/hero.svg"
+                  className="img-fluid rounded-start edit-img"
+                  alt="..."
+                />
               </div>
-            </div>
-            <div className="col-md-4">
-              <img src="assets/hero.svg" className="img-fluid rounded-start" alt="..." />
+              <div className="col-md-4">
+                <div className="card-body">
+                  <h1 className="card-title">Get a track of your activities</h1>
+                  <p className="card-text">
+                    Aren’t sure if you are doing the exercise properly? Worry not!
+                    We’ve got complete video assistance from where you can get
+                    help in following the routine
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="assets/hero.svg"
+                  className="img-fluid rounded-start edit-img edit-img-two"
+                  alt="..."
+                />
+              </div>
             </div>
           </div>
         </div>

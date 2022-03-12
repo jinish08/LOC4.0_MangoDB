@@ -21,7 +21,7 @@ const IndividExe = (props) => {
           px="15px"
         />
         <VStack alignItems="left">
-          <Heading>{props.exername}</Heading>
+          <Heading style={{color: "#21325E" }} >{props.exername}</Heading>
           <Text>{props.desc}</Text>
         </VStack>
       </HStack>
