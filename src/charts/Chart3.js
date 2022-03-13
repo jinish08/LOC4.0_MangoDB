@@ -2,7 +2,7 @@ import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const data = [
-  { name: "Today's Hours", value: 40 },
+  { name: "Today's Minutes", value: 40 },
   { name: "Weekly Average", value: 100 },
 ];
 const COLORS = ["#92A3FD", "#C58BF2"];

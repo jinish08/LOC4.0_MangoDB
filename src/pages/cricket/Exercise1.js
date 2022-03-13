@@ -25,14 +25,22 @@ import {
   where,
   increment,
 } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const Exercise1 = () => {
   const [renderedStreamDuration, setRenderedStreamDuration] =
     useState("00:00:00");
+
+  const navigate = useNavigate();
+
+  const handleClickBack = () => {
+    return navigate(`/cricket/exercise`);
+  }
+
   return (
     <>
       <Container maxW="container.xl" p="10">
-        <Button m="20px" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }}>
+        <Button m="20px" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }} onClick={handleClickBack}>
           <ChevronLeftIcon />
           Back
         </Button>

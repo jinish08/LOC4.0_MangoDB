@@ -8,10 +8,18 @@ import {
   Container,
 } from "@chakra-ui/react";
 import "../styles/IndividExe.css";
+import { useNavigate } from "react-router-dom";
 
 const IndividExe = (props) => {
+
+  const navigate = useNavigate();
+
+  const handleClick1 = () => {
+    return navigate(`/cricket/${props.route}`);
+  }
+
   return (
-    <Container w="400px" className="cardProperty" bgColor="#f5f5f5">
+    <Container w="400px" className="cardProperty" bgColor="#f5f5f5" onClick={handleClick1}>
       <HStack justifyContent="flex-start">
         <Image
           src={props.imgURL}

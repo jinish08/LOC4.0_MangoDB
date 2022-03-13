@@ -48,7 +48,7 @@ body{
 }
 
 .sidebar-link:hover{
-    color: blue;
+    color: blue!important;
 }
 
 .sidebar-link{
