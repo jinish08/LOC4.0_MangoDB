@@ -123,7 +123,7 @@ const Signup = ({ handleSign, sign }) => {
               Name
             </Text>
             <Input
-              placeholder="enter your name"
+              placeholder="Enter your name"
               type="name"
               color="black"
               borderColor="grey"
@@ -136,7 +136,7 @@ const Signup = ({ handleSign, sign }) => {
               Email
             </Text>
             <Input
-              placeholder="enter your email"
+              placeholder="Enter your email"
               type="email"
               color="black"
               borderColor="grey"
@@ -154,21 +154,21 @@ const Signup = ({ handleSign, sign }) => {
               borderColor="grey"
               _hover={{}}
               w="70%"
-              placeholder="enter your password"
+              placeholder="Enter your password"
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </Box>
-          <Checkbox mr="170px" my="4" colorScheme="blue" defaultIsChecked>
-            Checkbox
+          <Checkbox mr="125px" my="5" colorScheme="blue" defaultIsChecked>
+            Remember Me
           </Checkbox>
           <br />
-          <Button type="submit" my="4" colorScheme="teal" variant="solid">
-            SignIn
+          <Button type="submit" my="4" colorScheme="teal" variant="solid" bgColor="#92A3FD" _hover={{backgroundColor: "#7b8ef4"}}>
+            Sign Up
           </Button>
         </form>
-        <Text color="#1877F2" textAlign="left" mx="16" mt="10">
-          forgot password?
+        <Text color="#92A3FD" textAlign="left" mx="16" mt="10">
+          Forgot password?
         </Text>
       </Box>
     </>

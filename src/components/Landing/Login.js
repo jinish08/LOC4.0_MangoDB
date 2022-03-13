@@ -95,7 +95,7 @@ const Login = ({ handleLogin, loginin }) => {
               Email
             </Text>
             <Input
-              placeholder="enter your phone number"
+              placeholder="Enter your phone number"
               type="email"
               color="black"
               borderColor="grey"
@@ -104,7 +104,7 @@ const Login = ({ handleLogin, loginin }) => {
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Text textAlign="left" mx="16" my="3">
+            <Text textAlign="left" mx="16" my="3" >
               Password
             </Text>
             <Input
@@ -113,19 +113,19 @@ const Login = ({ handleLogin, loginin }) => {
               borderColor="grey"
               _hover={{}}
               w="70%"
-              placeholder="enter your password"
+              placeholder="Enter your password"
               required
               onChange={(e) => setPassword(e.target.value)}
             />
           </Box>
-          <Checkbox mr="170px" my="4" colorScheme="blue" defaultIsChecked>
+          <Checkbox mr="125px" my="4" colorScheme="blue" defaultIsChecked>
             Remember Me
           </Checkbox>
           <br />
-          <Button type="submit" my="4" colorScheme="teal" variant="solid">
-            SignIn
+          <Button type="submit" my="4" colorScheme="teal" variant="solid" bgColor="#92A3FD" _hover={{backgroundColor: "#7b8ef4"}}>
+            Sign In
           </Button>
-          <Text color="#1877F2" textAlign="left" mx="16" mt="10">
+          <Text color="#92A3FD" textAlign="left" mx="16" mt="10">
             forgot password?
           </Text>
         </chakra.form>
