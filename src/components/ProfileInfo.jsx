@@ -126,9 +126,10 @@ function ProfileInfo() {
         <>
           <PopoverTrigger className="buttonClass">
             <Button
+            mx="8"
               bgColor="#f5f5f5ff"
               color="#3E497A"
-              _hover={{ color: "#3E497A", bg: "white" }}
+              _hover={{ color: "#3E497A", bg: "#e2e8f0" }}
             >
               Profile{" "}
             </Button>
@@ -148,15 +149,15 @@ function ProfileInfo() {
               <PopoverCloseButton />
               <PopoverBody textAlign="center" p="5">
                 <HStack justifyContent="center" spacing={5}>
-                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5">
+                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5" borderRadius="20">
                     <Box>{level}</Box>
                     <Box>Level</Box>
                   </VStack>
-                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5">
+                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5" borderRadius="20">
                     <Box>{minutes}</Box>
                     <Box>Mins</Box>
                   </VStack>
-                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5">
+                  <VStack border="2px solid #21325E" bgColor="#21325E" p="5" borderRadius="20">
                     <Box>{points}</Box>
                     <Box>Points</Box>
                   </VStack>

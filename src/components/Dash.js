@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  VStack,
-  HStack,
-  Text,
-  Image,
-  Button,
-  Heading,
-  Container,
-} from "@chakra-ui/react";
 import "../styles/dashboard.css";
 import ProfileInfo from "./ProfileInfo";
-import { withTheme } from "@emotion/react";
 import { Link } from "react-router-dom";
 
 const Dash = () => {
@@ -22,8 +12,8 @@ const Dash = () => {
             <a href="" class="navbar-brand brand">
               Dashboard
             </a>
-       
-              <ProfileInfo/>
+
+            <ProfileInfo />
           </div>
         </nav>
       </section>
@@ -36,12 +26,13 @@ const Dash = () => {
                 aria-current="page"
                 to="/"
               >
-                <i class="fa-solid fa-house"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
+                <i class="fa-solid fa-house"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link sidebar-link" to="/cricket/exercise">
-                <i class="fa-solid fa-c"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cricket
+                <i class="fa-solid fa-dumbbell"></i>&nbsp;&nbsp;&nbsp;Exercise
               </Link>
             </li>
             <li class="nav-item">
@@ -51,12 +42,14 @@ const Dash = () => {
             </li>
             <li class="nav-item">
               <Link class="nav-link sidebar-link" to="">
-                <i class="fa-solid fa-dumbbell"></i>&nbsp;&nbsp;&nbsp;Exercise
+                <i class="fa-solid fa-c"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cricket
               </Link>
             </li>
             <li class="nav-item">
               <Link class="nav-link sidebar-link" to="#">
-              &nbsp;<i class="fa-solid fa-r"></i>&nbsp;&nbsp;&nbsp;&nbsp;Rewards
+                &nbsp;<i class="fa-solid fa-r"></i>
+                &nbsp;&nbsp;&nbsp;&nbsp;Rewards
               </Link>
             </li>
           </ul>
