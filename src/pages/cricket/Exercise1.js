@@ -121,8 +121,13 @@ const TimerController = ({
       let x = cricObj.E1[day] + parseInt(minutes);
       cricObj.E1[day] = parseInt(x);
       console.log(cricObj);
+      const min = docSnap.data().minutes;
+      const level = docSnap.data().level;
+      const poin = docSnap.data().points;
       await updateDoc(userDoc, {
         cricket: cricObj,
+        minutes: min + parseInt(minutes),
+        points: poin + parseInt(minutes)*parseInt(level),
       });
       console.log(docSnap.data().cricket);
     } catch (error) {
