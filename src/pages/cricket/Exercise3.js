@@ -42,7 +42,7 @@ const Exercise1 = () => {
 
   return (
     <>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" bgColor="rgb(221 221 221)">
         <HStack spacing={800}>
           <Button
             color="white"
@@ -72,11 +72,15 @@ const Exercise1 = () => {
             <Container
               className="timer-display"
               textAlign="center"
-              fontSize="4xl"
-              my="5"
+              fontSize="3xl"
             >
               {renderedStreamDuration}
             </Container>
+
+            <TimerController
+              renderedStreamDuration={renderedStreamDuration}
+              setRenderedStreamDuration={setRenderedStreamDuration}
+            />
           </VStack>
           <VStack justifyContent="center" w="md">
             <Webcam videoConstraints={{ width: 1280, height: 720 }} />
@@ -84,15 +88,16 @@ const Exercise1 = () => {
               Instructions:{" "}
             </Heading>
             <UnorderedList p="10px" m="10px" color="">
-              <ListItem>Lorem ipsum dolor sit amet</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+              <ListItem>
+                Get down on all fours, placing your hands slightly wider than
+                your shoulders.
+              </ListItem>
+              <ListItem>Straighten your arms and legs.</ListItem>
+              <ListItem>
+                Lower your body until your chest nearly touches the floor.
+              </ListItem>
+              <ListItem>Pause, then push yourself back up. Repeat</ListItem>
             </UnorderedList>
-            <TimerController
-              renderedStreamDuration={renderedStreamDuration}
-              setRenderedStreamDuration={setRenderedStreamDuration}
-            />
           </VStack>
         </HStack>
       </Container>

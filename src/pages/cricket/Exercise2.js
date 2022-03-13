@@ -43,7 +43,7 @@ const Exercise1 = () => {
 
   return (
     <>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" bgColor="rgb(221 221 221)">
         <HStack spacing={800}>
           <Button
             color="white"
@@ -73,11 +73,15 @@ const Exercise1 = () => {
             <Container
               className="timer-display"
               textAlign="center"
-              fontSize="4xl"
-              my="5"
+              fontSize="3xl"
             >
               {renderedStreamDuration}
             </Container>
+
+            <TimerController
+              renderedStreamDuration={renderedStreamDuration}
+              setRenderedStreamDuration={setRenderedStreamDuration}
+            />
           </VStack>
           <VStack justifyContent="center" w="md">
             <Webcam videoConstraints={{ width: 1280, height: 720 }} />
@@ -85,15 +89,20 @@ const Exercise1 = () => {
               Instructions:{" "}
             </Heading>
             <UnorderedList p="10px" m="10px" color="">
-              <ListItem>Lorem ipsum dolor sit amet</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+              <ListItem>Stand with your feet shoulder-width apart.</ListItem>
+              <ListItem>
+                Start by doing a regular squat, engage your core, and jump up
+                explosively.
+              </ListItem>
+              <ListItem>
+                When you land, lower your body back into the squat position to
+                complete one rep. Make sure you land with your entire foot on
+                the ground.
+              </ListItem>
+              <ListItem>
+                Be sure to land as quietly as possible, which requires control.
+              </ListItem>
             </UnorderedList>
-            <TimerController
-              renderedStreamDuration={renderedStreamDuration}
-              setRenderedStreamDuration={setRenderedStreamDuration}
-            />
           </VStack>
         </HStack>
       </Container>

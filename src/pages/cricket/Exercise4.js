@@ -39,7 +39,7 @@ const Exercise1 = () => {
 
   return (
     <>
-      <Container maxW="container.xl">
+      <Container maxW="container.xl" bgColor="rgb(221 221 221)">
         <HStack spacing={800}>
           <Button
             color="white"
@@ -59,8 +59,8 @@ const Exercise1 = () => {
             textAlign="right"
             onClick={handleClickBack}
           >
-            <CloseIcon fontSize="xs"/>&nbsp;
-            End
+            <CloseIcon fontSize="xs" />
+            &nbsp; End
           </Button>
         </HStack>
         <HStack w="full" h="full" p={10} spacing={10} align="flex-start">
@@ -69,11 +69,15 @@ const Exercise1 = () => {
             <Container
               className="timer-display"
               textAlign="center"
-              fontSize="4xl"
-              my="5"
+              fontSize="3xl"
             >
               {renderedStreamDuration}
             </Container>
+
+            <TimerController
+              renderedStreamDuration={renderedStreamDuration}
+              setRenderedStreamDuration={setRenderedStreamDuration}
+            />
           </VStack>
           <VStack justifyContent="center" w="md">
             <Webcam videoConstraints={{ width: 1280, height: 720 }} />
@@ -81,15 +85,10 @@ const Exercise1 = () => {
               Instructions:{" "}
             </Heading>
             <UnorderedList p="10px" m="10px" color="">
-              <ListItem>Lorem ipsum dolor sit amet</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+              <ListItem>Start each run with a gentle warm-up of at least 5 minutes.</ListItem>
+              <ListItem>Run at a conversational pace</ListItem>
+              <ListItem>Run or run/walk 20 to 30 minutes, two days a week</ListItem>
             </UnorderedList>
-            <TimerController
-              renderedStreamDuration={renderedStreamDuration}
-              setRenderedStreamDuration={setRenderedStreamDuration}
-            />
           </VStack>
         </HStack>
       </Container>

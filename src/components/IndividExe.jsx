@@ -19,7 +19,7 @@ const IndividExe = (props) => {
   }
 
   return (
-    <Container w="400px" className="cardProperty" bgColor="#f5f5f5" onClick={handleClick1}>
+    <Container w="400px" className="cardProperty" bgColor="#f5f5f5" onClick={handleClick1} _hover={{cursor: "pointer"}}>
       <HStack justifyContent="flex-start">
         <Image
           src={props.imgURL}

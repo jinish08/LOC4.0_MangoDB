@@ -31,7 +31,7 @@ const Exerciselist = () => {
         </HStack>
         <HStack p="20px" w="1000px" spacing={30} style={{ marginTop: 20 }}>
           <IndividExe
-            exername="PushUps"
+            exername="Push Ups"
             desc="PushUps are important for any cricketer"
             imgURL="http://localhost:3000/assets/pushups.gif"
             className="cards-exercise"
