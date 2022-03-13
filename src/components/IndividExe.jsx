@@ -22,7 +22,7 @@ const IndividExe = (props) => {
         />
         <VStack alignItems="left">
           <Heading style={{color: "#21325E" }} >{props.exername}</Heading>
-          <Text>{props.desc}</Text>
+          <Text style={{color: "#3E497A" }}>{props.desc}</Text>
         </VStack>
       </HStack>
     </Container>
