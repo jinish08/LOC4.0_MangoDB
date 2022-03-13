@@ -96,12 +96,12 @@ function FinalChart() {
             <Chart day1={day1} day2={day2} day3={day3} day4={day4} day5={day5} day6={day6} day7={day7}/>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
-            <Text padding={"100px 40px"}>
+            <Text padding={"100px 40px"} fontSize={"24px"}>
 
             </Text>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
-            <Text margin={"120px 0 0 100px"} fontSize={"20px"}>
+            <Text margin={"120px 0 0 100px"} fontSize={"24px"}>
               You have worked on Exercise 1 for 16mins. Well Done!
               You have worked on Exercise 4 for 0 mins. You can work on Exercise 4. Your overall time spent today is 19mins working out.
             </Text>

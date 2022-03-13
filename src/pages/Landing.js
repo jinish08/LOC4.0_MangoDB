@@ -32,7 +32,7 @@ const Landing = () => {
       <HStack justifyContent="space-evenly" mt="-300" height={"100vh"}>
         <VStack spacing={"60px"}>
           <VStack mt="-20" spacing={"20px"}>
-            <Heading size={"4xl"}>Already have</Heading>
+            <Heading size={"4xl"}>FitZilla</Heading>
             <Text fontSize={"xl"}>This is a temporary statement</Text>
           </VStack>
           <HStack spacing={"24px"}>
@@ -74,7 +74,7 @@ const Landing = () => {
             <div className="row g-0">
               <div className="col-md-4">
                 <img
-                  src="assets/hero.svg"
+                  src="assets/3-card-1.svg"
                   className="img-fluid rounded-start"
                   alt="..."
                 />
@@ -105,7 +105,7 @@ const Landing = () => {
               </div>
               <div className="col-md-4">
                 <img
-                  src="assets/hero.svg"
+                  src="assets/2-card.svg"
                   className="img-fluid rounded-start"
                   alt="..."
                 />
@@ -115,9 +115,9 @@ const Landing = () => {
         </div>
         <div className="card mb-3 bootstrap-card bootstrap-card-two">
           <div className="row g-0">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <img
-                src="assets/hero.svg"
+                src="assets/3-card-1.svg"
                 className="img-fluid rounded-start edit-img"
                 alt="..."
               />
@@ -133,11 +133,7 @@ const Landing = () => {
               </div>
             </div>
             <div className="col-md-4">
-              <img
-                src="assets/hero.svg"
-                className="img-fluid rounded-start edit-img edit-img-two"
-                alt="..."
-              />
+            <img src="assets/3-card-2.svg" className="img-fluid rounded-start edit-img edit-img-two video" alt="..."/>
             </div>
           </div>
         </div>
@@ -146,7 +142,7 @@ const Landing = () => {
             <div className="row g-0">
               <div className="col-md-4">
                 <img
-                  src="assets/hero.svg"
+                  src="assets/4-card-1.svg"
                   className="img-fluid rounded-start edit-img"
                   alt="..."
                 />
@@ -163,7 +159,7 @@ const Landing = () => {
               </div>
               <div className="col-md-4">
                 <img
-                  src="assets/hero.svg"
+                  src="assets/4-card-2.svg"
                   className="img-fluid rounded-start edit-img edit-img-two"
                   alt="..."
                 />
