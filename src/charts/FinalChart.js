@@ -75,8 +75,8 @@ function FinalChart() {
           setDay6(docSnap.data().cricket.E1[5] + docSnap.data().cricket.E2[5] + docSnap.data().cricket.E3[5] + docSnap.data().cricket.E4[5])
           setDay7(docSnap.data().cricket.E1[6] + docSnap.data().cricket.E2[6] + docSnap.data().cricket.E3[6] + docSnap.data().cricket.E4[6])
 
-          console.log(day1);
-          console.log(day2);
+          // console.log(day1);
+          // console.log(day2);
       } catch (error) {
         console.log(error);
       }
@@ -97,7 +97,7 @@ function FinalChart() {
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
             <Text padding={"100px 40px"} fontSize={"20px"}>
-                Congratulations on exercising for {} minutes today! 
+                Congratulations on exercising for {day1} minutes today! 
                 You are pretty close to getting one more level up! 
                 What you can do by levelling up? <br />
                 You can earn more points as you level up!! <br /> Exercise for more than 15 mins a day and get to LEVEL 2.<br /> After 30 mins, get to LEVEL 3 and so on....
@@ -105,8 +105,8 @@ function FinalChart() {
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
             <Text margin={"120px 0 0 100px"} fontSize={"24px"}>
-              You have worked on Exercise 1 for 16mins. Well Done!
-              You have worked on Exercise 4 for 0 mins. You can work on Exercise 4. Your overall time spent today is 19mins working out.
+              You have worked on Exercise 1 for {exe1} mins. Well Done!
+              You have worked on Exercise 4 for {exe4} mins. You can work on Exercise 4. Your overall time spent today is {exe1+exe2+exe3+exe4} mins working out.
             </Text>
           </GridItem>
           <GridItem marginLeft={"100px"}>

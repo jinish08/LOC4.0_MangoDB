@@ -82,13 +82,13 @@ const Login = ({ handleLogin, loginin }) => {
           <Flex justifyContent="flex-end" p="4" _hover={{ cursor: "pointer" }}>
             <CloseIcon onClick={handleLogin} />
           </Flex>
-          <Text as="h3" fontWeight="semibold" fontSize="2xl">
+          <Text as="h3" fontWeight="semibold" fontSize="2xl" padding={"80px 0 0 0" }>
             Welcome back!
           </Text>
           <Text as="h5" fontWeight="semibold" my="3">
             Log in using
           </Text>
-          <Flex justifyContent="space-around" mx="10" my="8" mb="20">
+          <Flex justifyContent="space-around" mx="10" my="4" mb="10">
           </Flex>
           <Box>
             <Text textAlign="left" mx="16" my="3">

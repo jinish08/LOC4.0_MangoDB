@@ -90,13 +90,13 @@ const Signup = ({ handleSign, sign }) => {
         <Flex justifyContent="flex-end" p="4" _hover={{ cursor: "pointer" }}>
           <CloseIcon onClick={handleSign} />
         </Flex>
-        <Text as="h3" fontWeight="semibold" fontSize="2xl">
+        <Text as="h3" fontWeight="semibold" fontSize="2xl" padding={"50px 0 0 0"}>
           Welcome!
         </Text>
         <Text as="h5" fontWeight="semibold" my="3">
           Sign Up using
         </Text>
-        <Flex justifyContent="space-around" mx="10" my="8" mb="20"></Flex>
+        <Flex justifyContent="space-around" mx="10" my="4" mb="10"></Flex>
         <form
           onSubmit={async (e) => {
             //     e.preventDefault();
