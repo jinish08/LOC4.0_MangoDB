@@ -7,7 +7,7 @@ const Level = () => {
   const incLevel = async () => {
       console.log("fkhafja");
     try {
-      await levelUp();
+      await levelUp(1);
     } catch (e){
       console.log(e);
     }

@@ -24,7 +24,7 @@ import {
         {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger className="buttonClass">
-              <Button bgColor="#F1D00A"  _hover={{bg:"white", color:"#3E497A"}}>Profile </Button>
+              <Button  bgColor="#f5f5f5ff" color="#3E497A"  _hover={{color:"#3E497A", bg:"white"}}>Profile </Button>
             </PopoverTrigger>
             <Portal>
               <PopoverContent zIndex='2' position="absolute" right="-20" top="50" bg="#3E497A" color="white">
@@ -60,7 +60,7 @@ import {
                 </PopoverBody>
                 <PopoverFooter textAlign="center"></PopoverFooter>
                 <HStack justifyContent="center" spacing={30} marginBottom="3.5">
-                  <Button bgColor="#F1D00A" 
+                  <Button bgColor="white" color="#3E497A" 
                   size="sm"
                     mt={4}
                     colorScheme='blue'
@@ -72,7 +72,7 @@ import {
                   >
                     Redeem
                   </Button>
-                  <Button bgColor="#F1D00A" 
+                  <Button  bgColor="white" color="#3E497A" 
                   size="sm"
                     mt={4}
                     colorScheme='blue'
