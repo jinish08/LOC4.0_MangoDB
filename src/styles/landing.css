@@ -44,3 +44,12 @@
 .information{
     background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
 }
+
+.bootstrap-card:hover{
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.2);
+    
+}
+
+.video{
+    /* margin-left: 0; */
+}
