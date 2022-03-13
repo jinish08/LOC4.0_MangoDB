@@ -33,7 +33,7 @@ const Landing = () => {
         <VStack spacing={"60px"}>
           <VStack mt="-20" spacing={"20px"}>
             <Heading size={"4xl"}>FitZilla</Heading>
-            <Text fontSize={"xl"}>This is a temporary statement</Text>
+            <Text fontSize={"3xl"} >Feel the Fitness!</Text>
           </VStack>
           <HStack spacing={"24px"}>
             <Button
@@ -44,11 +44,12 @@ const Landing = () => {
               colorScheme="blue"
               onClick={handleLogin}
               w="56"
+              h="50"
               rounded="full"
             >
               <HStack>
                 <FiLogIn />
-                <Text>&nbsp;&nbsp;Login</Text>
+                <Text>&nbsp;&nbsp;Log In</Text>
               </HStack>
             </Button>
             <Button
@@ -58,11 +59,12 @@ const Landing = () => {
               }}
               onClick={handleSign}
               w="56"
+              h="50"
               rounded="full"
               color="white"
             >
               <FiLogIn />
-              &nbsp;&nbsp;&nbsp; Signup
+              &nbsp;&nbsp;&nbsp; Sign Up
             </Button>
           </HStack>
         </VStack>

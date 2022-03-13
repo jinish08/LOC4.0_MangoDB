@@ -126,7 +126,7 @@ const Login = ({ handleLogin, loginin }) => {
             Sign In
           </Button>
           <Text color="#92A3FD" textAlign="left" mx="16" mt="10">
-            forgot password?
+            Forgot password?
           </Text>
         </chakra.form>
       </Box>
