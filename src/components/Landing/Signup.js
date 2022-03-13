@@ -58,6 +58,8 @@ const Signup = ({ handleSign, sign }) => {
           E3: [0, 0, 0, 0, 0, 0, 0],
           E4: [0, 0, 0, 0, 0, 0, 0],
         },
+        minutes:0,
+        level:1,
       });
       navigate("/");
     } catch (error) {
