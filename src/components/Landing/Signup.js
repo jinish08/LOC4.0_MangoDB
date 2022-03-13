@@ -91,10 +91,10 @@ const Signup = ({ handleSign, sign }) => {
           <CloseIcon onClick={handleSign} />
         </Flex>
         <Text as="h3" fontWeight="semibold" fontSize="2xl">
-          Welcome back!
+          Welcome!
         </Text>
         <Text as="h5" fontWeight="semibold" my="3">
-          Signup using
+          Sign Up using
         </Text>
         <Flex justifyContent="space-around" mx="10" my="8" mb="20"></Flex>
         <form
