@@ -28,6 +28,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../utils/init-firebase";
 import { useAuth } from "../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 function ProfileInfo() {
   const [level, setLevel] = useState(0);
@@ -36,6 +37,8 @@ function ProfileInfo() {
   const [name, setName] = useState("");
 
   const { currentUser } = useAuth();
+
+  const navigate = useNavigate();
 
   const uid = currentUser?.uid;
   console.log(uid);
@@ -185,7 +188,7 @@ function ProfileInfo() {
                   size="sm"
                   mt={4}
                   colorScheme="blue"
-                  onClick={onClose}
+                  onClick={()=>navigate("/landing")}
                   ref={initRef}
                   w="20"
                   mx="125"
