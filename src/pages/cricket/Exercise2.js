@@ -30,8 +30,12 @@ import {
   const Exercise1 = () => {
     const [renderedStreamDuration, setRenderedStreamDuration] =
       useState("00:00:00");
-  
+    
     const navigate = useNavigate();
+    
+    const handleClickNext = () => {
+        return navigate(`/cricket/e3`);
+      }
   
     const handleClickBack = () => {
       return navigate(`/cricket/exercise`);
@@ -73,6 +77,7 @@ import {
                 bgColor="#92A3FD"
                 _hover={{ bg: "#C58BF2" }}
                 textAlign="right"
+                onClick={handleClickNext}
               >
                 Go to next excerise
                 <ArrowRightIcon />

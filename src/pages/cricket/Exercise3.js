@@ -36,6 +36,9 @@ import {
     const handleClickBack = () => {
       return navigate(`/cricket/exercise`);
     }
+    const handleClickNext = () => {
+        return navigate(`/cricket/e4`);
+    }
   
     return (
       <>
@@ -73,6 +76,7 @@ import {
                 bgColor="#92A3FD"
                 _hover={{ bg: "#C58BF2" }}
                 textAlign="right"
+                onClick={handleClickNext}
               >
                 Go to next excerise
                 <ArrowRightIcon />
