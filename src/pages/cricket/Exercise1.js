@@ -37,6 +37,10 @@ const Exercise1 = () => {
     return navigate(`/cricket/exercise`);
   }
 
+  const handleClickNext = () => {
+    return navigate(`/cricket/e2`);
+  }
+
   return (
     <>
       <Container maxW="container.xl" p="10">
@@ -73,6 +77,7 @@ const Exercise1 = () => {
               bgColor="#92A3FD"
               _hover={{ bg: "#C58BF2" }}
               textAlign="right"
+              onClick={handleClickNext}
             >
               Go to next excerise
               <ArrowRightIcon />

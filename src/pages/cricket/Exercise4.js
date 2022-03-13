@@ -73,9 +73,9 @@ import {
                 bgColor="#92A3FD"
                 _hover={{ bg: "#C58BF2" }}
                 textAlign="right"
+                onClick={handleClickBack}
               >
-                Go to next excerise
-                <ArrowRightIcon />
+                End
               </Button>
             </VStack>
           </HStack>
