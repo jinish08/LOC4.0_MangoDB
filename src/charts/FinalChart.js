@@ -96,8 +96,11 @@ function FinalChart() {
             <Chart day1={day1} day2={day2} day3={day3} day4={day4} day5={day5} day6={day6} day7={day7}/>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
-            <Text padding={"100px 40px"} fontSize={"24px"}>
-
+            <Text padding={"100px 40px"} fontSize={"20px"}>
+                Congratulations on exercising for {} minutes today! 
+                You are pretty close to getting one more level up! 
+                What you can do by levelling up? <br />
+                You can earn more points as you level up!! <br /> Exercise for more than 15 mins a day and get to LEVEL 2.<br /> After 30 mins, get to LEVEL 3 and so on....
             </Text>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
