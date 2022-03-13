@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Cricket from "./pages/cricket";
 import Exercise1 from "./pages/cricket/Exercise1";
 import Exercise2 from "./pages/cricket/Exercise2";
@@ -8,14 +8,20 @@ import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import AuthContextProvider from "./contexts/AuthContext";
 import Exerciselist from "./pages/cricket/Exerciselist";
+import {useAuth} from "./contexts/AuthContext";
+// import { useNavigate } from "react-router-dom";
 
 function App() {
+
+  const {currentUser} = useAuth();
+
   return (
     <AuthContextProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/landing" element={<Landing />} />
+        {/* {currentUser?<Navigate to="/" />:<Navigate to="/landing" />} */}
         <Route path="/cricket" element={<Cricket />} />
         <Route path="/cricket/exercise" element={<Exerciselist />} />
         <Route path="cricket/e1" element={<Exercise1 />} />
