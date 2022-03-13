@@ -32,18 +32,19 @@ const Exercise1 = () => {
   return (
     <>
       <Container maxW="container.xl" p="10">
-        <Button m="20px" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }}>
+        <Button color="white" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }}>
           <ChevronLeftIcon />
           Back
         </Button>
         <HStack w="full" h="full" p={10} spacing={10} align="flex-start">
           <VStack px="40px">
             <Image w="lg" src="http://localhost:3000/assets/exe1.gif" />
-            <Container className="timer-display" textAlign="center">
+            <Container className="timer-display" textAlign="center" fontSize="4xl" my="5">
               {renderedStreamDuration}
             </Container>
           </VStack>
           <VStack justifyContent="center" w="md">
+            <Webcam videoConstraints={{ width: 1280, height: 720 }} />
             <Heading p="10px" m="10px">
               Instructions:{" "}
             </Heading>
@@ -53,20 +54,21 @@ const Exercise1 = () => {
               <ListItem>Integer molestie lorem at massa</ListItem>
               <ListItem>Facilisis in pretium nisl aliquet</ListItem>
             </UnorderedList>
-            {/* <Webcam videoConstraints={{width: 1280,height: 720}}/> */}
             <TimerController
               renderedStreamDuration={renderedStreamDuration}
               setRenderedStreamDuration={setRenderedStreamDuration}
             />
-        <Button
-          size="md"
-          p="25px"
-          bgColor="#92A3FD"
-          _hover={{ bg: "#C58BF2" }}
-        >
-          Go to next excerise
-          <ArrowRightIcon />
-        </Button>
+            <Button
+            color="white"
+              size="md"
+              p="25px"
+              bgColor="#92A3FD"
+              _hover={{ bg: "#C58BF2" }}
+              textAlign="right"
+            >
+              Go to next excerise
+              <ArrowRightIcon />
+            </Button>
           </VStack>
         </HStack>
       </Container>
@@ -189,9 +191,11 @@ const TimerController = ({
       <Container className="buttons-wrapper">
         <Button
           bgColor="#92A3FD"
+          color="white"
           _hover={{ bg: "#C58BF2" }}
           p="10px"
           m="10px"
+          size="lg"
           onClick={startHandler}
           disabled={isStartBtnDisabled}
           className={`timer-controller-btn ${
@@ -202,10 +206,11 @@ const TimerController = ({
         </Button>
         <Button
           bgColor="#92A3FD"
+          color="white"
           _hover={{ bg: "#C58BF2" }}
           p="10px"
           m="10px"
-          my="100px"
+          size="lg"
           className={`timer-controller-btn danger ${
             isStopBtnDisabled ? "disabled" : ""
           }`}
@@ -216,9 +221,11 @@ const TimerController = ({
         </Button>
         <Button
           bgColor="#92A3FD"
+          color="white"
           _hover={{ bg: "#C58BF2" }}
           p="10px"
           m="10px"
+          size="lg"
           className={`timer-controller-btn ${
             isPauseBtnDisabled ? "disabled" : ""
           }`}
@@ -229,9 +236,11 @@ const TimerController = ({
         </Button>
         <Button
           bgColor="#92A3FD"
+          color="white"
           _hover={{ bg: "#C58BF2" }}
           p="10px"
           m="10px"
+          size="lg"
           className={`timer-controller-btn ${
             isResumeBtnDisabled ? "disabled" : ""
           }`}
