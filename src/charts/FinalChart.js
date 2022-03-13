@@ -101,14 +101,9 @@ function FinalChart() {
             </Text>
           </GridItem>
           <GridItem w={"600px"} textAlign="center">
-            <Text margin={"120px 0 0 100px"}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              elementum lobortis sollicitudin. Phasellus faucibus nisl nec
-              dictum ultrices. Donec aliquam efficitur libero eu venenatis.
-              Vestibulum ultrices est in erat posuere, id convallis orci
-              volutpat. Sed turpis mi, dictum eget tempor eget, sodales in urna.
-              Duis nec vestibulum elit, et convallis nisi. Fusce rutrum sit amet
-              mi sit amet vulputate. Donec.
+            <Text margin={"120px 0 0 100px"} fontSize={"20px"}>
+              You have worked on Exercise 1 for 16mins. Well Done!
+              You have worked on Exercise 4 for 0 mins. You can work on Exercise 4. Your overall time spent today is 19mins working out.
             </Text>
           </GridItem>
           <GridItem marginLeft={"100px"}>

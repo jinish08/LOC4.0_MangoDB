@@ -31,6 +31,9 @@ import { useAuth } from "../contexts/AuthContext";
 
 function ProfileInfo() {
   const [level, setLevel] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [points, setPoints] = useState(0);
+  const [name, setName] = useState("");
 
   const { currentUser } = useAuth();
 
@@ -59,6 +62,9 @@ function ProfileInfo() {
         const userDoc = doc(db, "users", userID);
         const docSnap = await getDoc(userDoc);
         setLevel(docSnap.data().level);
+        setMinutes(docSnap.data().minutes);
+        setPoints(docSnap.data().points);
+        setName(docSnap.data().name);
         console.log(level);
       } catch (error) {
         console.log(error);
@@ -111,7 +117,7 @@ function ProfileInfo() {
     }
     getLevel();
     updateLevel();
-  }, [day,level]);
+  }, [day,level,minutes,points,name]);
 
   const initRef = React.useRef();
   return (
@@ -138,7 +144,7 @@ function ProfileInfo() {
               color="white"
             >
               <PopoverHeader textAlign="center" p="5">
-                Hello World
+                {name}
               </PopoverHeader>
               <PopoverCloseButton />
               <PopoverBody textAlign="center" p="5">
@@ -148,11 +154,11 @@ function ProfileInfo() {
                     <Box>Level</Box>
                   </VStack>
                   <VStack border="2px solid #21325E" bgColor="#21325E" p="5" borderRadius="20">
-                    <Box>15</Box>
+                    <Box>{minutes}</Box>
                     <Box>Mins</Box>
                   </VStack>
                   <VStack border="2px solid #21325E" bgColor="#21325E" p="5" borderRadius="20">
-                    <Box>20</Box>
+                    <Box>{points}</Box>
                     <Box>Points</Box>
                   </VStack>
                 </HStack>
