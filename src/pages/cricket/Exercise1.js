@@ -35,23 +35,47 @@ const Exercise1 = () => {
 
   const handleClickBack = () => {
     return navigate(`/cricket/exercise`);
-  }
+  };
 
   const handleClickNext = () => {
     return navigate(`/cricket/e2`);
-  }
+  };
 
   return (
     <>
-      <Container maxW="container.xl" p="10">
-        <Button color="white" m="5" bgColor="#92A3FD" _hover={{ bg: "#C58BF2" }} onClick={handleClickBack}>
-          <ChevronLeftIcon />
-          Back
-        </Button>
+      <Container maxW="container.xl">
+        <HStack spacing={800}>
+          <Button
+            color="white"
+            m="5"
+            bgColor="#92A3FD"
+            _hover={{ bg: "#C58BF2" }}
+            onClick={handleClickBack}
+          >
+            <ChevronLeftIcon />
+            Back
+          </Button>
+          <Button
+            m="5"
+            color="white"
+            bgColor="#92A3FD"
+            _hover={{ bg: "#C58BF2" }}
+            textAlign="right"
+            onClick={handleClickNext}
+          >
+            Go to next excerise
+            <ArrowRightIcon />
+          </Button>
+        </HStack>
         <HStack w="full" h="full" p={10} spacing={10} align="flex-start">
           <VStack px="40px">
             <Image w="lg" src="http://localhost:3000/assets/skipping.gif" />
-            <Container className="timer-display" textAlign="center" fontSize="4xl" my="5">
+            <Container
+              className="timer-display"
+              textAlign="center"
+              fontSize="4xl"
+              my="5"
+            >
               {renderedStreamDuration}
             </Container>
           </VStack>
@@ -70,18 +94,6 @@ const Exercise1 = () => {
               renderedStreamDuration={renderedStreamDuration}
               setRenderedStreamDuration={setRenderedStreamDuration}
             />
-            <Button
-            color="white"
-              size="md"
-              p="25px"
-              bgColor="#92A3FD"
-              _hover={{ bg: "#C58BF2" }}
-              textAlign="right"
-              onClick={handleClickNext}
-            >
-              Go to next excerise
-              <ArrowRightIcon />
-            </Button>
           </VStack>
         </HStack>
       </Container>
@@ -127,7 +139,7 @@ const TimerController = ({
       await updateDoc(userDoc, {
         cricket: cricObj,
         minutes: min + parseInt(minutes),
-        points: poin + parseInt(minutes)*parseInt(level),
+        points: poin + parseInt(minutes) * parseInt(level),
       });
       console.log(docSnap.data().cricket);
     } catch (error) {
