@@ -46,7 +46,7 @@ const Exercise1 = () => {
         </Button>
         <HStack w="full" h="full" p={10} spacing={10} align="flex-start">
           <VStack px="40px">
-            <Image w="lg" src="http://localhost:3000/assets/exe1.gif" />
+            <Image w="lg" src="http://localhost:3000/assets/skipping.gif" />
             <Container className="timer-display" textAlign="center" fontSize="4xl" my="5">
               {renderedStreamDuration}
             </Container>
