@@ -71,7 +71,7 @@ export default function AuthContextProvider({ children }) {
       console.log(err);
     }
 
-    return setLevel(level+1)
+    return setLevel(level)
   }
 
   function login(email, password) {
