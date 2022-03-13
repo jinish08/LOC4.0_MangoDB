@@ -5,7 +5,6 @@ import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import AuthContextProvider from "./contexts/AuthContext";
 import Exerciselist from "./pages/cricket/Exerciselist";
-import Level from "./pages/Level";
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <Route path="/cricket" element={<Cricket />} />
         <Route path="/cricket/exercise" element={<Exerciselist />} />
         <Route path="cricket/e1" element={<Exercise1 />} />
-        <Route path="/profile" element={<Level />} />
       </Routes>
     </BrowserRouter>
     </AuthContextProvider>

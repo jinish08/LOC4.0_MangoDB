@@ -10,17 +10,6 @@ import {
   sendPasswordResetEmail,
   confirmPasswordReset,
 } from "@firebase/auth";
-import {
-  collection,
-  doc,
-  updateDoc,
-  getDoc,
-  getDocs,
-  query,
-  where,
-  increment,
-} from "firebase/firestore";
-import { db } from "../utils/init-firebase";
 
 const AuthContext = createContext({
   currentUser: null,
@@ -30,14 +19,13 @@ const AuthContext = createContext({
   signInWithGoogle: () => Promise,
   forgotPassword: () => Promise,
   resetPassword: () => Promise,
-  level: 1,
 });
 
 export const useAuth = () => useContext(AuthContext);
 
 export default function AuthContextProvider({ children }) {
   const [currentUser, setCurrentUser] = useState(null);
-  const [level, setLevel] = useState(1);
+ 
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -50,28 +38,6 @@ export default function AuthContextProvider({ children }) {
 
   function register(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
-  }
-
-  const levelUp = async (lvl) => {
-    const uid = currentUser?.uid;
-    try{
-      const userRef = collection(db, "users");
-      const q = query(userRef, where("user_id", "==", uid));
-      const querySnapshot = await getDocs(q);
-      const userID = querySnapshot.docs[0].id;
-      console.log(userID);
-      const userDoc = doc(db, "users", userID);
-      const docSnap = await getDoc(userDoc);
-      console.log(docSnap.data().level);
-      await updateDoc(userDoc, {
-        level: lvl,
-      });
-      console.log(docSnap.data().level);
-    } catch (err) {
-      console.log(err);
-    }
-
-    return setLevel(level)
   }
 
   function login(email, password) {
@@ -105,8 +71,6 @@ export default function AuthContextProvider({ children }) {
     signInWithGoogle,
     forgotPassword,
     resetPassword,
-    level,
-    levelUp,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

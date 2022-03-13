@@ -10,42 +10,46 @@ import {
   Cell,
 } from "recharts";
 
-const data = [
-  {
-    name: "Day 1",
-    Time: 24,
-  },
-  {
-    name: "Day 2",
-    Time: 14,
-  },
-  {
-    name: "Day 3",
-    Time: 10,
-  },
-  {
-    name: "Day 4",
-    Time: 4,
-  },
-  {
-    name: "Day 5",
-    Time: 5,
-  },
-  {
-    name: "Day 6",
-    Time: 13,
-  },
-  {
-    name: "Day 7",
-    Time: 12,
-  },
-];
 
 const color1 = ["#92A3FD", "#9DCEFF"];
 const color2 = ["#C58BF2", "#EEA4CE"];
 const barColors = ["#92A3FD", "#C58BF2"];
 
-const Chart = () => {
+const Chart = ({day1,day2,day3,day4,day5,day6,day7}) => {
+
+
+  
+const data = [
+  {
+    name: "Day 1",
+    Time: day1,
+  },
+  {
+    name: "Day 2",
+    Time: day2,
+  },
+  {
+    name: "Day 3",
+    Time: day3,
+  },
+  {
+    name: "Day 4",
+    Time:  day4,
+  },
+  {
+    name: "Day 5",
+    Time:   day5,
+  },
+  {
+    name: "Day 6",
+    Time:  day6,
+  },
+  {
+    name: "Day 7",
+    Time: day7,
+  },
+];
+
   return (
     <div>
       <BarChart

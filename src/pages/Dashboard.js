@@ -6,8 +6,6 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Dashboard = () => {
 
-  const {level} = useAuth();
-  console.log(level);
   return (
     <>
       <Dash />
