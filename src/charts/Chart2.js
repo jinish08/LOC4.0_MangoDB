@@ -14,14 +14,14 @@ let renderLabel = function (entry) {
   return entry.name;
 };
 
-const Chart2 = ({exe1}) => {
+const Chart2 = ({exe1,exe2,exe3,exe4}) => {
 
   
 let data = [
   { name: "Exercise 1", value: exe1 },
-  { name: "Exercise 2", value: 40 },
-  { name: "Exercise 3", value: 20 },
-  { name: "Exercise 4", value: 20 },
+  { name: "Exercise 2", value: exe2 },
+  { name: "Exercise 3", value: exe3 },
+  { name: "Exercise 4", value: exe4 },
 ];
   console.log(exe1);
 

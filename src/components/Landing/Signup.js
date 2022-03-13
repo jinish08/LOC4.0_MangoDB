@@ -54,6 +54,9 @@ const Signup = ({ handleSign, sign }) => {
         points: 0,
         cricket: {
           E1: [0, 0, 0, 0, 0, 0, 0],
+          E2: [0, 0, 0, 0, 0, 0, 0],
+          E3: [0, 0, 0, 0, 0, 0, 0],
+          E4: [0, 0, 0, 0, 0, 0, 0],
         },
       });
       navigate("/");
