@@ -16,21 +16,21 @@ function App() {
   const {currentUser} = useAuth();
 
   return (
-    <AuthContextProvider>
-    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/landing" element={<Landing />} />
+        {!currentUser && <Route path="/landing" element={<Landing />} />}
         {/* {currentUser?<Navigate to="/" />:<Navigate to="/landing" />} */}
+
+        {currentUser && <><Route path="/" element={<Dashboard />} />
         <Route path="/cricket" element={<Cricket />} />
         <Route path="/cricket/exercise" element={<Exerciselist />} />
         <Route path="cricket/e1" element={<Exercise1 />} />
         <Route path="cricket/e2" element={<Exercise2 />} />
         <Route path="cricket/e3" element={<Exercise3 />} />
         <Route path="cricket/e4" element={<Exercise4 />} />
+        </>}
+
+        <Route path="*" element={<Navigate to={currentUser?"/":"landing"} />} />
       </Routes>
-    </BrowserRouter>
-    </AuthContextProvider>
   );
 }
 

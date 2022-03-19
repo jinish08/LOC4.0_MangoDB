@@ -36,7 +36,7 @@ function ProfileInfo() {
   const [points, setPoints] = useState(0);
   const [name, setName] = useState("");
 
-  const { currentUser } = useAuth();
+  const { currentUser,logout } = useAuth();
 
   const navigate = useNavigate();
 
@@ -188,7 +188,7 @@ function ProfileInfo() {
                   size="sm"
                   mt={4}
                   colorScheme="blue"
-                  onClick={()=>navigate("/landing")}
+                  onClick={()=>logout()}
                   ref={initRef}
                   w="20"
                   mx="125"
